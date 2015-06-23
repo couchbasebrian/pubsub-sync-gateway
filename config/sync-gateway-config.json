@@ -1,0 +1,11 @@
+{
+  "log": ["*"],
+  "adminInterface": "0.0.0.0:4985",
+  "databases": {
+    "db": {
+      "server": "http://localhost:8091",
+      "bucket": "bucketForSyncGateway",
+      "users": { "GUEST": { "disabled": false, "admin_channels": ["*"] } }
+    }
+  }
+}
