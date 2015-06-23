@@ -13,10 +13,10 @@ TEMPFILE=./tempfile.json
 #
 echo "### Press Control-C to exit ###"
 #
-ITERATION=0
+ITERATION=1000
 while [ 1 ]
 do
-  echo "### About to publish...($ITERATION)"
+  echo "### Creating data file...(Iteration $ITERATION)"
   TIMENOW=`date +%F-%H:%M:%S`
   ITERATION=$[ITERATION+1]
   DOCUMENTID=document$ITERATION
@@ -26,9 +26,10 @@ do
   echo "}" >> $TEMPFILE
   cat $TEMPFILE
   #
+  echo "### About to publish..."
   curl -X PUT -H "Content-Type: application/json" "http://$HOSTNAME:$SGPORT/$DBNAME/$DOCUMENTID" --data @$TEMPFILE
   echo
-  sleep 1
+  #sleep 1
 done
 #
 # eof
