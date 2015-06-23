@@ -29,7 +29,7 @@ do
   echo "### About to publish..."
   curl -X PUT -H "Content-Type: application/json" "http://$HOSTNAME:$SGPORT/$DBNAME/$DOCUMENTID" --data @$TEMPFILE
   echo
-  #sleep 1
+  sleep 1
 done
 #
 # eof
