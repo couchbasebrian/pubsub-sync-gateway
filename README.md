@@ -7,9 +7,9 @@ How to use:
 2.  Create a bucket called "bucketForSyncGateway"
 3.  Start up Sync Gateway on a node in the cluster using the included config file.
 
-    $ pwd
-    /opt/couchbase-sync-gateway
-    $ ./bin/sync_gateway ./config/sync-gateway-config.json 
+        $ pwd
+        /opt/couchbase-sync-gateway
+        $ ./bin/sync_gateway ./config/sync-gateway-config.json 
 
 4.  Change the host or IP address in the publish.sh and subscribe.sh scripts 
 5.  In one terminal window, run publish.sh
