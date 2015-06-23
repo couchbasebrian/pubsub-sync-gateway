@@ -12,7 +12,8 @@ DBNAME=db
 echo "### Press Control-C to exit ###"
 while [ 1 ]
 do
-  curl -s "http://$HOSTNAME:$SGPORT/$DBNAME/_changes?feed=continuous&include_docs=true" | jq '.doc'
+  #curl -s "http://$HOSTNAME:$SGPORT/$DBNAME/_changes?feed=continuous&include_docs=true" | jq '.doc'
+  curl -s "http://$HOSTNAME:$SGPORT/$DBNAME/_changes?feed=continuous&include_docs=true" 
   echo "### Reconnecting..."
 done
 #
