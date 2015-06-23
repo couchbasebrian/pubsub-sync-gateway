@@ -6,6 +6,11 @@ How to use:
 1.  Set up a Couchbase cluster
 2.  Create a bucket called "bucketForSyncGateway"
 3.  Start up Sync Gateway on a node in the cluster using the included config file.
+
+    $ pwd
+    /opt/couchbase-sync-gateway
+    $ ./bin/sync_gateway ./config/sync-gateway-config.json 
+
 4.  Change the host or IP address in the publish.sh and subscribe.sh scripts 
 5.  In one terminal window, run publish.sh
 6.  In another terminal window, run subscribe.sh
